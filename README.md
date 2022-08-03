@@ -3,7 +3,7 @@
 
 As you may already know Strassen Matrix Multiplication Algorithm is a recursive algorithm that uses a divide and conquer manner to solve matrix multiplication problem with a time complexity of $O(n^{log_2^7})=O(n^{2.807...})$ which is better than $O(n^3)$ native method.
 
- I faced the problem of parallelizing the Strassen algorithm for Cuda GPU in the Parallel Algorithm course's project, and generally parallelizing recursive algorithms is not efficient in GPU and you can't achieve much speedup, so for the workaround this efficiency problem I came up with is the idea of trying to find the final formula of each element in resulting matrix and after that, I can assign each formula of each element to a GPU thread and voilà solving Strassen algorithm without recursion calls.
+ I faced the problem of parallelizing the Strassen algorithm for Cuda GPU in the Parallel Algorithm course's project, and generally parallelizing recursive algorithms is not efficient in GPU and you can't achieve much speedup, to solve this efficiency problem I came up with the idea of trying to find the final formula of each element in resulting matrix and after that, I can assign each formula of each element to a GPU thread and voilà solving Strassen algorithm without recursion calls.
  
 To do so first we solve the Strassen algorithm in a recursive manner but instead of doing the operations in any step we try to generate the formula for that step and add it to the final formula string after that we have a `LOOK_UP` variable that has all the elements formula then we generate Cuda Kernel from this variable.
 
