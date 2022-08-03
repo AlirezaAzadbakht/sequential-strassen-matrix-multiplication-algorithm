@@ -1,5 +1,5 @@
 # Sequential Strassen Matrix Multiplication Algorithm (for parallelism)
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](hhttps://colab.research.google.com/github/AlirezaAzadbakht/sequential-strassen-matrix-multiplication-algorithm/blob/main/sequential_strassen_matrix_multiplication_algorithm.ipynb)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/github/AlirezaAzadbakht/sequential-strassen-matrix-multiplication-algorithm/blob/main/sequential_strassen_matrix_multiplication_algorithm.ipynb)
 
 As you may already know Strassen Matrix Multiplication Algorithm is a recursive algorithm that uses a divide and conquer manner to solve matrix multiplication problem with a time complexity of $O(n^{log_2^7})=O(n^{2.807...})$ which is better than $O(n^3)$ native method.
 
