@@ -43,7 +43,10 @@ def init_matrix(M):
     return a, b
 
 def code_generator(M, LOOK_UP):
-    os.remove('generated_code.py')
+    try:
+        os.remove('generated_code.py')
+    except:
+        pass
     first = True
     with open("generated_code.py", "a") as myfile:
         myfile.write(f"{base_code}\n")
